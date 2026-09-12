@@ -1,50 +1,128 @@
 .container {
-    max-width: 500px;
-    margin: 40px auto;
-    font-family: Arial, sans-serif;
-    background: #f4f4f9;
-    padding: 20px;
-    border-radius: 8px;
+    max-width: 600px;
+    margin: 50px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000000; /* Fondo negro */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(229, 57, 53, 0.3);
+    border: 1px solid #e53935;
+}
+
+h1 {
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 span {
+    color: #e53935; /* Acento rojo */
 }
 
 .input-box {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 25px;
 }
 
 input {
     flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px 15px;
+    border: 2px solid #333333;
+    border-radius: 6px;
+    background: #111111;
+    color: #ffffff;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #e53935; /* Borde rojo al enfocar */
+}
+
+input::placeholder {
+    color: #888888;
 }
 
 button {
-    padding: 8px 12px;
-    background: #007bff;
-    color: white;
+    padding: 12px 20px;
+    background: #e53935; /* Botón rojo */
+    color: #ffffff;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background: #c62828;
+}
+
+button:active {
+    transform: scale(0.98);
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px;
-    background: white;
-    margin-bottom: 8px;
+    padding: 12px 15px;
+    background: #ffffff; /* Fondo blanco para las tareas */
+    color: #000000; /* Texto negro */
+    margin-bottom: 12px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #e53935; /* Borde rojo */
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+li span {
+    cursor: pointer;
+    flex: 1;
+}
+
+li:hover {
+    transform: translateX(5px);
+}
+
+li button {
+    padding: 8px 12px;
+    background: #000000; /* Botón negro para eliminar */
+    color: #ffffff;
+    border: 1px solid #000000;
     border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+li button:hover {
+    background: #ffffff;
+    color: #e53935;
+    border-color: #e53935;
 }
 
 .completed span {
     text-decoration: line-through;
-    color: #888;
+    color: #888888;
+}
+
+.completed {
+    background: #e0e0e0; /* Fondo más grisáceo si está completada */
+    border-left-color: #555555;
+    color: #555555;
 }

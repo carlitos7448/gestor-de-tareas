@@ -24,10 +24,10 @@ describe('Gestor de Tareas E2E', () => {
     });
 
     it('Debe marcar una tarea como completada', () => {
-        cy.get('[data-cy="task-item"]').first().as('firstTask');
+        cy.get('[data-cy="task-item"]').last().as('lastTask');
 
-        cy.get('@firstTask').find('[data-cy="task-title"]').click();
-        cy.get('@firstTask').should('have.class', 'completed');
+        cy.get('@lastTask').find('[data-cy="task-title"]').click();
+        cy.get('@lastTask').should('have.class', 'completed');
     });
 
     it('Debe eliminar una tarea y mostrar el mensaje de lista vacía si se borran todas', () => {
